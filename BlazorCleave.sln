@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorCleave", "BlazorCleave\BlazorCleave.csproj", "{3C2B0199-2C64-4814-8AB0-2852677B5CAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorCleave", "BlazorCleave\BlazorCleave.csproj", "{3C2B0199-2C64-4814-8AB0-2852677B5CAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "samples\Server\Server.csproj", "{E69FEE50-319A-4FF2-8D89-7F8F4F964830}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "samples\Server\Server.csproj", "{E69FEE50-319A-4FF2-8D89-7F8F4F964830}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{8B6C7EA0-6B71-40ED-AF60-3FD6D85E1D02}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines.yml = azure-pipelines.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
