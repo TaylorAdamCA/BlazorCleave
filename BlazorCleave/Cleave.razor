@@ -1,7 +1,7 @@
 ﻿@using BlazorCleave.Data
 @using Microsoft.JSInterop
 
-<input @ref="element" placeholder="@PlaceHolder" type="text" />
+<input @ref="element" placeholder="@PlaceHolder" @attributes="@ExtraAttributes" type="text" />
 
 @inject IJSRuntime JsRuntime
 @code
@@ -36,6 +36,9 @@
     ///</summary>
     [Parameter]
     public String PlaceHolder { get; set; }
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object> ExtraAttributes { get; set; }
 
     ElementReference element;
 
