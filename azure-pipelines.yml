@@ -28,7 +28,7 @@ steps:
   displayName: 'dotnet pack'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: './artifacts'
+    PathtoPublish: $(Build.ArtifactStagingDirectory)
     ArtifactName: 'artifacts'
     publishLocation: 'Container'
 
