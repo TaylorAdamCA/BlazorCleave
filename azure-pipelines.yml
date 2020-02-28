@@ -19,17 +19,17 @@ steps:
 # Build the solution. Not strictly required to create the package,
 # but we want the build to fail if any sample can't build.
 - script: dotnet build --configuration $(buildConfiguration)
-  workingDirectory: BlazorCleave
+  workingDirectory: ./
   displayName: 'dotnet build $(buildConfiguration)'
 
 # Actually creates the NuGet package file
 - script: dotnet pack --configuration $(buildConfiguration) /p:VersionSuffix=$(Build.BuildNumber)
-  workingDirectory: BlazorCleave
+  workingDirectory: ./BlazorCleave
   displayName: 'dotnet pack'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: $(Build.ArtifactStagingDirectory)
-    ArtifactName: 'artifacts'
+    ArtifactName: './artifacts'
     publishLocation: 'Container'
 
 # Uploads the NuGet package file to nuget.org
