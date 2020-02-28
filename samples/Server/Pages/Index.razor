@@ -1,0 +1,25 @@
+﻿@page "/"
+
+<BlazorCleave.Cleave Placeholder="hh:mm" TimeFormat="TimeFormat" InputType="InputType.Time" />
+<br />
+<BlazorCleave.Cleave Placeholder="YYYY/MM/DD" DateFormat="@DateFormat" InputType="InputType.Date" />
+<br />
+<BlazorCleave.Cleave Placeholder="Phone Number" CountryCode="CountryCode.CA" InputType="InputType.PhoneNumber" />
+<br />
+<BlazorCleave.Cleave Placeholder="Credit Card" InputType="InputType.CreditCard" />
+
+@code
+{
+
+    public TimeFormat TimeFormat = new TimeFormat
+    {
+        Format = new[] { 'h', 'm' }
+    };
+
+    public DateFormat DateFormat = new DateFormat
+    {
+        Delimiter = '/',
+        Format = new char[] { 'Y', 'm', 'd' }
+    };
+
+}

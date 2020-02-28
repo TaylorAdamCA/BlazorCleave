@@ -1,0 +1,67 @@
+﻿@using BlazorCleave.Data
+@using Microsoft.JSInterop
+
+<input @ref="element" placeholder="@PlaceHolder" type="text" />
+
+@inject IJSRuntime JsRuntime
+@code
+{
+
+    /// <summary>
+    /// The type of input
+    ///</summary>
+    [Parameter]
+    public InputType InputType { get; set; }
+
+    /// <summary>
+    /// The country code for displaying phone numbers, default is canada
+    ///</summary>
+    [Parameter]
+    public CountryCode CountryCode { get; set; } = CountryCode.CA;
+
+    /// <summary>
+    /// The way you want the time to be formatted. example: ['h', 'm', 's']
+    ///</summary>
+    [Parameter]
+    public TimeFormat TimeFormat { get; set; }
+
+    /// <summary>
+    /// The way you want the date to be formatted, and the delimiter. example: ['Y', 'm', 'd'], '/'
+    ///</summary>
+    [Parameter]
+    public DateFormat DateFormat { get; set; }
+
+    /// <summary>
+    /// The placeholder text for your  input
+    ///</summary>
+    [Parameter]
+    public String PlaceHolder { get; set; }
+
+    ElementReference element;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            switch (InputType)
+            {
+                case InputType.CreditCard:
+                    await JsRuntime.InvokeVoidAsync("BlazorCleave.formatCreditCard", element);
+                    break;
+                case InputType.PhoneNumber:
+                    await JsRuntime.InvokeVoidAsync("BlazorCleave.formatPhoneNumber", element, CountryCode.ToString());
+                    break;
+                case InputType.Time:
+                    Console.WriteLine("Time " + TimeFormat.Format);
+                    await JsRuntime.InvokeVoidAsync("BlazorCleave.formatTime", element, TimeFormat.Format);
+                    break;
+                case InputType.Date:
+                    await JsRuntime.InvokeVoidAsync("BlazorCleave.formatDate", element, DateFormat.Delimiter, DateFormat.Format);
+                    break;
+
+            }
+        }
+
+    }
+
+}
