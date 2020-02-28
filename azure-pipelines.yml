@@ -28,7 +28,7 @@ steps:
   displayName: 'dotnet pack'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'BlazorCleave/artifacts'
+    PathtoPublish: './artifacts'
     ArtifactName: 'artifacts'
     publishLocation: 'Container'
 
