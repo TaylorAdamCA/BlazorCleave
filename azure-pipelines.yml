@@ -23,7 +23,7 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 
 # Actually creates the NuGet package file
-- script: dotnet pack --configuration $(buildConfiguration) /p:VersionSuffix=$(Build.BuildNumber)
+- script: dotnet pack --configuration $(buildConfiguration) /p:Version=1.0.$(Build.BuildId)
   workingDirectory: demo/src/BlazorCleave
   displayName: 'dotnet pack'
 - task: PublishBuildArtifacts@1
