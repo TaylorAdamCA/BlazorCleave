@@ -46,4 +46,4 @@ steps:
     command: push
     packagesToPush: 'demo/artifacts/*.nupkg'
     nuGetFeedType: external
-    publishFeedCredentials: 'NuGet demo'
+    publishFeedCredentials: 'BlazorCleave'
