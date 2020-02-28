@@ -28,9 +28,10 @@ steps:
   displayName: 'dotnet pack'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: ./artifacts
+    PathtoPublish: ./
     ArtifactName: 'artifacts'
     publishLocation: 'Container'
+
 
 # Uploads the NuGet package file to nuget.org
 # Important notes:
