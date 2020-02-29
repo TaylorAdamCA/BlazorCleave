@@ -19,18 +19,19 @@ steps:
 # Build the solution. Not strictly required to create the package,
 # but we want the build to fail if any sample can't build.
 - script: dotnet build --configuration $(buildConfiguration)
-  workingDirectory: demo
+  workingDirectory: ./
   displayName: 'dotnet build $(buildConfiguration)'
 
 # Actually creates the NuGet package file
 - script: dotnet pack --configuration $(buildConfiguration) /p:Version=1.0.$(Build.BuildId)
-  workingDirectory: demo/src/BlazorCleave
+  workingDirectory: ./BlazorCleave
   displayName: 'dotnet pack'
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: 'demo/artifacts'
+    PathtoPublish: ./
     ArtifactName: 'artifacts'
     publishLocation: 'Container'
+
 
 # Uploads the NuGet package file to nuget.org
 # Important notes:
@@ -44,6 +45,6 @@ steps:
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
   inputs:
     command: push
-    packagesToPush: 'demo/artifacts/*.nupkg'
+    packagesToPush: './BlazorCleave/bin/Release/*.nupkg'
     nuGetFeedType: external
-    publishFeedCredentials: 'NuGet demo'
+    publishFeedCredentials: 'Blazor Cleave'
