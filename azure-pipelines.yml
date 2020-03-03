@@ -45,6 +45,7 @@ steps:
   condition: and(succeeded(), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
   inputs:
     command: push
-    packagesToPush: './BlazorCleave/bin/Release/*.nupkg'
+    packagesToPush: './BlazorCleave/bin/Release/*.nupkg; ./BlazorCleave/*.nuspec'
     nuGetFeedType: external
     publishFeedCredentials: 'Blazor Cleave'
+    
