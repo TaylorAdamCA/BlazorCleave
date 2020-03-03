@@ -1,51 +1,45 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
-    <metadata>
-        <!-- The identifier that must be unique within the hosting gallery -->
-        <id>BlazorCleave</id>
+  <metadata>
+    <!-- The identifier that must be unique within the hosting gallery -->
+    <id>BlazorCleave</id>
 
+    <version>1.0.96</version>
 
-        <!-- Authors contain text that appears directly on the gallery -->
-        <authors>Taylor Adam</authors>
+    <!-- Authors contain text that appears directly on the gallery -->
+    <authors>Taylor Adam</authors>
 
-        <!-- 
+    <!--
             Owners are typically nuget.org identities that allow gallery
-            users to easily find other packages by the same owners.  
+            users to easily find other packages by the same owners.
         -->
-        <owners>Taylor Adam</owners>
-        
-         <!-- Project URL provides a link for the gallery -->
-        <projectUrl>https://github.com/TaylorAdamCA/BlazorCleave</projectUrl>
+    <owners>Taylor Adam</owners>
 
-         <!-- License information is displayed on the gallery -->
-        <license type="expression">MIT</license>
-        
+    <!-- Project URL provides a link for the gallery -->
+    <projectUrl>https://github.com/TaylorAdamCA/BlazorCleave</projectUrl>
 
-        <!-- The icon is used in Visual Studio's package manager UI -->
-        <iconUrl>http://github.com/contoso/UsefulStuff/nuget_icon.png</iconUrl>
+    <!-- License information is displayed on the gallery -->
+    <license type="expression">MIT</license>
 
-        <!-- 
+    <!-- The icon is used in Visual Studio's package manager UI -->
+    <iconUrl>http://github.com/contoso/UsefulStuff/nuget_icon.png</iconUrl>
+
+    <!--
             If true, this value prompts the user to accept the license when
-            installing the package. 
+            installing the package.
         -->
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
 
-        <!-- Any details about this particular release -->
-        <releaseNotes>Initial realease, working as intended</releaseNotes>
+    <!-- Any details about this particular release -->
+    <releaseNotes>Initial realease, working as intended</releaseNotes>
 
-        <!-- 
+    <!--
             The description can be used in package manager UI. Note that the
-            nuget.org gallery uses information you add in the portal. 
+            nuget.org gallery uses information you add in the portal.
         -->
-        <description>Wraps the functionality of Cleave.js into a Blazor class library</description>
+    <description>Wraps the functionality of Cleave.js into a Blazor class library</description>
 
-
-
-        <!-- Tags appear in the gallery and can be used for tag searches -->
-        <tags>Blazor Cleave Cleave.js Input Formatting</tags>
-
-      
-    </metadata>
-
-    
+    <!-- Tags appear in the gallery and can be used for tag searches -->
+    <tags>Blazor Cleave Cleave.js Input Formatting</tags>
+  </metadata>
 </package>

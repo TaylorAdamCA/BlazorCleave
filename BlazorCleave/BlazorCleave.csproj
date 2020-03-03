@@ -4,6 +4,15 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RazorLangVersion>3.0</RazorLangVersion>
+    <PackageId>BlazorCleave</PackageId>
+    <Authors>Taylor Adam</Authors>
+    <Owners>Taylor Adam</Owners>
+    <Description>Wraps the functionality of Cleave.js into a Blazor class library</Description>
+    <PackageReleaseNotes>Initial realease, working as intended</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/TaylorAdamCA/BlazorCleave</RepositoryUrl>
+    <PackageIconUrl>http://github.com/contoso/UsefulStuff/nuget_icon.png</PackageIconUrl>
+    <PackageTags>Blazor Cleave Cleave.js Input Formatting</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
