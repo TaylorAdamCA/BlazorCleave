@@ -19,7 +19,14 @@ A Blazor class library that wraps the functionality of Cleave.js.
     <script src="_content/BlazorCleave/cleave-phone.i18n.js"></script>
 ```
 
-You're now ready to use the package. For example, inside a `.razor` file, add:
+4. If you want to add some default styling, in your `_Host.cshtml` (for Blazor Server) or `index.html` (for Blazor WebAssembly) file
+add the following after your current stylesheet link:
+
+```html
+    <link href="_content/BlazorCleave/style.css" rel="stylesheet" />
+```
+
+You're now ready to use the package. For example, inside a `.razor` file, 
 
 ```html
 //Time formatting
@@ -38,6 +45,9 @@ You're now ready to use the package. For example, inside a `.razor` file, add:
 
 // Credit card formatting
 <Cleave Placeholder="Credit Card" InputType="InputType.CreditCard" />
+
+// Numeral formatting
+<Cleave Placeholder="Numeral formatting" InputType="NumeralTypes.Type.Thousand" />
 ```
 
 

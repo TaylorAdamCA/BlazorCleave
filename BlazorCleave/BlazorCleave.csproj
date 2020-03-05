@@ -8,7 +8,7 @@
     <Authors>Taylor Adam</Authors>
     <Owners>Taylor Adam</Owners>
     <Description>Wraps the functionality of Cleave.js into a Blazor class library</Description>
-    <PackageReleaseNotes>Initial realease, working as intended</PackageReleaseNotes>
+    <PackageReleaseNotes>Added Numeral Formatting</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/TaylorAdamCA/BlazorCleave</RepositoryUrl>
     <PackageIconUrl>http://github.com/contoso/UsefulStuff/nuget_icon.png</PackageIconUrl>
