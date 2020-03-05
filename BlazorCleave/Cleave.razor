@@ -14,6 +14,12 @@
     public InputType InputType { get; set; }
 
     /// <summary>
+    /// The way you want your numbers to be formatted, default is thousand
+    /// </summary>
+    [Parameter]
+    public NumeralTypes.Type NumeralType { get; set; } = NumeralTypes.Type.Thousand;
+
+    /// <summary>
     /// The country code for displaying phone numbers, default is canada
     ///</summary>
     [Parameter]
@@ -55,11 +61,13 @@
                     await JsRuntime.InvokeVoidAsync("BlazorCleave.formatPhoneNumber", element, CountryCode.ToString());
                     break;
                 case InputType.Time:
-                    Console.WriteLine("Time " + TimeFormat.Format);
                     await JsRuntime.InvokeVoidAsync("BlazorCleave.formatTime", element, TimeFormat.Format);
                     break;
                 case InputType.Date:
                     await JsRuntime.InvokeVoidAsync("BlazorCleave.formatDate", element, DateFormat.Delimiter, DateFormat.Format);
+                    break;
+                case InputType.Numeral:
+                    await JsRuntime.InvokeVoidAsync("BlazorCleave.formatNumeral", element, NumeralTypes.GetTypeString(NumeralType));
                     break;
 
             }

@@ -9,6 +9,7 @@ namespace BlazorCleave.Data
         CreditCard,
         Time,
         Date,
-        PhoneNumber
+        PhoneNumber,
+        Numeral
     }
 }

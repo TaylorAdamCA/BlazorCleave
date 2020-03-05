@@ -1,0 +1,13 @@
+﻿input {
+    outline: none;
+    -webkit-appearance: none;
+    border: 3px solid #e6e6e6;
+    border-radius: 5px;
+    background-color: #fff;
+    line-height: 60px;
+    vertical-align: middle;
+    height: 66px;
+    font-size: 32px;
+    width: 100%;
+    padding: 0 15px;
+}

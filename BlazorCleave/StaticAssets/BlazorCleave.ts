@@ -28,4 +28,10 @@ export default class BlazorCleave {
             creditCard: true
         });
     }
+    static formatNumeral(elem: Element, numeralType: any) {
+        let cleave = new Cleave((elem) as any, {
+            numeral: true,
+            numeralThousandsGroupStyle: numeralType
+        });
+    }
 };

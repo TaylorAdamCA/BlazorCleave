@@ -17,6 +17,16 @@
 
   <ItemGroup>
     <None Remove="Data\cleave.min.js" />
+    <None Remove="StaticAssets\style.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WebpackBuildInputs Remove="Data\NumeralTypes.cs" />
+    <WebpackBuildInputs Remove="StaticAssets\style.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="StaticAssets\style.css" />
   </ItemGroup>
 
   <ItemGroup>
